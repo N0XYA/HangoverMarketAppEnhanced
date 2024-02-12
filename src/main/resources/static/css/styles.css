@@ -69,6 +69,7 @@ html {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
     text-align: center;
     font-size: 35px;
+    caret-color: transparent;
 }
 
 .search > input::placeholder {
@@ -79,6 +80,8 @@ html {
 .loginAndCart {
     float: right;
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .loginAndCart > a > img{
@@ -86,6 +89,13 @@ html {
     height: 75px;
     margin-right: 13px;
     margin-top: 13px;
+}
+
+.logout {
+    margin-top: 13px;
+    margin-right: 13px;
+    width: 75px;
+    height: 75px;
 }
 
 .main_content {
@@ -96,6 +106,8 @@ html {
     border-radius: 15px;
     margin-bottom: 25px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .categories {
@@ -241,6 +253,13 @@ html {
     margin-left: auto;
     margin-right: auto;
     font-size: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.add_to_card_btn:hover{
+    background-color: black;
+    color: #FBFBFB;
 }
 
 .footer {
@@ -320,15 +339,96 @@ html {
     float: right;
     margin-left: auto;
     flex-direction: column;
+    margin-top: 15px;
 }
 
-.social > a > img {
-    width: 90px;
+.social > a {
     height: 90px;
     margin-bottom: 46px;
     margin-right: 15px;
 }
 
-.social > img:first-child {
-    margin-top: 15px;
+.social > a > img {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* login and registration */
+
+.login_form {
+    background-color: #F7F7F7;
+    height: 556px;
+    width: 500px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: 274px;
+}
+
+.registration_form {
+    background-color: #F7F7F7;
+    height: 831px;
+    width: 500px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: 274px;
+    
+
+}
+
+.form_name {
+    font-size: 50px;
+    margin-left: 25px;
+    margin-top: 24px;
+}
+
+.auth_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth_form > input[type="text"]{
+    width: 450px;
+    height: 75px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    padding-left: 21px;
+    font-size: 35px;
+    caret-color: transparent;
+}
+
+.auth_form > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.auth_form > button {
+    border: none;
+    height: 75px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.auth_form > button:hover{
+    background-color: black;
+    color: #ffffff;
 }

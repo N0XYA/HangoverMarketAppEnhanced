@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/main.css}">
-    <link rel="stylesheet" th:href="@{/css/registration.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
     <header th:insert="~{blocks/header}"></header>
+    <div class="main_content">
+        <div class="login_form">
+            <span class="form_name">login</span><br>
+            <form class="auth_form" th:action="@{/users/login}" th:method="POST">
+                <input type="text" name="username" id="username" placeholder="username">
+                <input type="text" name="password" id="password" placeholder="password">
+                <button type="submit">press me</button>
+                <button type="button" onclick="window.location= '/users/registration';">join us</button>
+            </form>
+        </div>
+    </div>
 
-<!--    <div th:if="${param.error}">-->
-<!--        <div class="alert alert-danger">Invalid Email or Password</div>-->
-<!--    </div>-->
-<!--    <div th:if="${param.logout}">-->
-<!--        <div class="alert alert-success"> You have been logged out.</div>-->
-<!--    </div>-->
-
-    <div class="body-wrapper">
+    <!-- <div class="body-wrapper">
         <div class="main_container">
             <div class="main">
                 <form class="register_form" th:action="@{/users/login}" th:method="POST">
@@ -28,9 +31,11 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
+
     <div id="aside"></div>
     <footer th:insert="~{blocks/footer}"></footer>
+    <div style="color: none; opacity: 0; height: 25px;">0</div>
     <script th:src="@{/js/login.js}"></script>
 </body>
 </html>

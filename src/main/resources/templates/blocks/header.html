@@ -1,17 +1,19 @@
 <div th:fragment="header" xmlns:th="http://www.thymeleaf.org" class="header">
     <a class="brand" href="/">
-        <img src="images/free-icon-beer.png" alt="">
+        <img th:src="@{/images/free-icon-beer.png}" alt="">
         <span class>Hangover</span>
     </a>
     <div class="search">
         <input type="text" placeholder="search">
     </div>
     <div class="loginAndCart">
-        <a href="#">
-            <img src="images/shopping-cart.png" alt="">
+        <a href="#" sec:authorize = "isAuthenticated()">
+            <img th:src="@{/images/shopping-cart.png}" alt="">
         </a>
-        <a href="#">
-            <img src="images/free-icon-avatar.png" alt="">
+        <a href="/users/login" sec:authorize="!isAuthenticated()">
+            <img th:src="@{/images/free-icon-avatar.png}" alt="">
         </a>
+        <form sec:authorize="isAuthenticated()" th:action="@{/logout}" th:method="POST">
+            <input class="logout" type="image" th:src="@{/images/logout.png}">
     </div> 
 </div>
