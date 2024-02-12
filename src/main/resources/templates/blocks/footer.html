@@ -1,36 +1,60 @@
-<div th:fragment="footer" xmlns:th="http://www.w3.org/1999/xhtml" id="footer">
-    <section class="footer">
-        <div class="container_footer">
-            <div class="footer_col">
-                <div class="col">
-                    <h4 class="name_developer">Кирилл "Windflaw" Валиков</h4><br>
-                    <a href="https://vk.com/windflawkv"><img th:src="@{/images/vk-icon.png}" width="40px"></a>
-                    <a href="https://t.me/Windflawkv"><img th:src="@{/images/telega-icon.png}" width="40px"></a>
-                    <a href="#"><img th:src="@{/images/inst-icon.png}" width="40px"></a>
-                    <a href="https://github.com/Windflawoffical"><img th:src="@{/images/github-icon.png}" width="40px"></a>
-                </div>
-                <div class="col">
-                    <h4 class="name_developer">Денис "DENISUS" Пак</h4><br>
-                    <a href="https://vk.com/id244320945"><img th:src="@{/images/vk-icon.png}" width="40px"></a>
-                    <a href="https://t.me/d3nisus"><img th:src="@{/images/telega-icon.png}" width="40px"></a>
-                    <a href="#"><img th:src="@{/images/inst-icon.png}" width="40px"></a>
-                    <a href="https://github.com/d3nisus"><img th:src="@{/images/github-icon.png}" width="40px"></a>
-                </div>
-                <div class="col">
-                    <h4 class="name_developer">Кирилл Гологузов</h4><br>
-                    <a href="https://vk.com/id145852799"><img th:src="@{/images/vk-icon.png}" width="40px"></a>
-                    <a href="https://t.me/yota_d2"><img th:src="@{/images/telega-icon.png}" width="40px"></a>
-                    <a href="#"><img th:src="@{/images/inst-icon.png}" width="40px"></a>
-                    <a href="https://github.com/N0XYA"><img th:src="@{/images/github-icon.png}" width="40px"></a>
-                </div>
-                <div class="col">
-                    <h4 class="name_developer">Анатолий "Толянчик" Гарин</h4><br>
-                    <a href="https://vk.com/fisting_is_300buckss"><img th:src="@{/images/vk-icon.png}" width="40px"></a>
-                    <a href="https://t.me/chfirchko3004"><img th:src="@{/images/telega-icon.png}" width="40px"></a>
-                    <a href="#"><img th:src="@{/images/inst-icon.png}" width="40px"></a>
-                    <a href="https://github.com/Chfirchko"><img th:src="@{/images/github-icon.png}" width="40px"></a>
-                </div>   
+<div th:fragment="footer" xmlns:th="http://www.w3.org/1999/xhtml" class="footer">
+    <div class="about">
+        <span class="about_title">about this project</span>
+        <span class="about_text">
+            HangoverMarket - магазин алкогольной продукции, после которой не бывает похмелья!<br><br>
+            Проект был спроектирован и создан для освоения фреймворка spring-boot, основ HTML и JavaSript.<br><br>
+            Роли в проекте:<br>
+            Кирилл Валиков - создание логики взаимодействия сервиса с базой данных (PostgreSQL).
+            Единолично разобрался и имплементировал первичную логику RESTFul архитектуры, после чего объяснил
+            принципы работы другим участникам проекта. Единолично имплементировал spring security для
+            возможности регистрации и авторизации на сайте. Создал логику отображения отдельной страницы
+            товара при нажатии на товар. (Допиши тут сам потом).<br><br>
+            Кирилл Гологузов - создание и имплементация логики взаимодействия frontend с backend, а именно:<br>
+            - Возможность добавления товара в базу данных через графический интерфейс (страница администратора)
+            с предпросмотром и загрузкой изображения.<br>
+            - Сохранение изображения в локальном хранилище, на котором развернут backend.<br>
+            - Получение изображения с сервера по запросу frontend.Вёрстка страниц HTML.<br><br>
+            
+            Денис Пак - создание прошлого дизайна сервиса и вёрстка страниц HTML. ( Допиши тут сам потом).
+        </span>
+    </div>
+    <div class="creators">
+        <div class="card">
+            <div class="logo_and_name">
+                <img src="images/valya_av.jpg" alt="">
+                <span class="creator_name">kirill "windflaw" valikov</span>
+                <span class="creator_info">WindflawOfficial</span>
+            </div>
+            <div class="social">
+                <a href="https://github.com/Windflawoffical">
+                    <img src="images/github-icon.png" alt="">
+                </a>
+                <a href="https://t.me/Windflawkv">
+                    <img src="images/telega-icon.png" alt="">
+                </a>
+                <a href="https://vk.com/windflawkv">
+                    <img src="images/vk-icon.png" alt="">
+                </a>
             </div>
         </div>
-    </section>
+        <div class="card">
+            <div class="logo_and_name">
+                <img src="images/github_av.jpg" alt="">
+                <span class="creator_name">kirill gologuzov</span>
+                <span class="creator_info">Noxya</span>
+            </div>
+            <div class="social">
+                <a href="https://github.com/N0XYA">
+                    <img src="images/github-icon.png" alt="">
+                </a>
+                <a href="https://t.me/yota_d2">
+                    <img src="images/telega-icon.png" alt="">
+                </a>
+                <a href="https://vk.com/id145852799">
+                    <img src="images/vk-icon.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
