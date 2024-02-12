@@ -4,62 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
-    <link rel="stylesheet" th:href="@{/css/main.css}">
-    <link th:href="@{/css/registration.css}" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
     <header th:insert="~{blocks/header}"></header>
-    <div th:insert="~{blocks/underheader}"></div>
-    <div class="body-wrapper">
-      <div class="aside-left">
-        <div class="aside_btns_pos">
-          <button class="aside_btn">Спецпредложения</button>
-          <button class="aside_btn">Идеи для подарков</button>
-          <button class="aside_btn">Вино импорт</button>
-          <button class="aside_btn">Вино Россия</button>
-          <button class="aside_btn">Водка, настойки</button>
-          <button class="aside_btn">Виски, бурбон</button>
-          <button class="aside_btn">Текила, ром, ликер</button>
+    <div class="main_content">
+        <div class="categories">
+            hehe wine
         </div>
-      </div>
-
-      <div class="main_container">
-        <div class="main">
-          <div class="carousel"></div>
-          <div class="carousel_btns_pos">
-            <button class="carousel_btn"></button>
-            <button class="carousel_btn"></button>
-            <button class="carousel_btn"></button>
-            <button class="carousel_btn"></button>
-            <button class="carousel_btn"></button>
-          </div>
-        </div>
-        <div class="main">
-          <section class="cards">
-            <div class="container">
-<!--                    сюда происходит вставка из js файла-->
-            </div>
-          </section>
-      </div>
-      <!-- <div class="aside-right">lorem ipsum dolor sit amet, consectetur adipiscing elit
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div> -->
     </div>
-    </div>
-    <script th:src="@{/js/load_items.js}"></script>
-    <footer th:insert="~{blocks/footer}"></footer>
-<!-- 
-    <dialog class = "center">
-        <div id="modal-box">
-          <div id="modal-text">Вам исполнилось 18 лет?</div>
-          <button id="close-modal-btn" class="modal-btn">Да</button>
-          <button onclick="location.href = 'https://www.youtube.com/channel/UCoEl0fhXJDaoH-9rGUvf45w';" id="no-btn"
-          class="modal-btn" >Нет</button>
-          <img src="/images/stop-cop.png" alt="Изображение" />
-        </div>
-      </dialog>
-    <script src="/js/popup.js"></script> -->
 </body>
 </html>

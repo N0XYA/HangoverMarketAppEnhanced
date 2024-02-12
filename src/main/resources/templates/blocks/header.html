@@ -1,24 +1,17 @@
-<div th:fragment="header" xmlns:th="http://www.thymeleaf.org">
-<!--da из за этого видать он столько ме  -->
-<!-- <div "> -->
-<div class="header">
-    <div class="brand">
-        <a href="/"><img class="brandimage" th:src="@{/images/free-icon-beer.png}"/></a>
-        <a href="/"><div class="brandname">Hangover</div></a>
+<div th:fragment="header" xmlns:th="http://www.thymeleaf.org" class="header">
+    <a class="brand" href="/">
+        <img src="images/free-icon-beer.png" alt="">
+        <span class>Hangover</span>
+    </a>
+    <div class="search">
+        <input type="text" placeholder="search">
     </div>
-
-<!--    <form th:action="@{logout}" th:method="POST">-->
-<!--        <img class="image" th:src="@{/images/logout.png}">-->
-<!--    </form>-->
-
-    <div class="btns">
-        <div class="signin_out" sec:authorize="isAuthenticated()"><form class="signin_out" th:action="@{/logout}" th:method="POST"><input type="image" class="image" th:src="@{/images/logout.png}"/></form></div>
-        <div class="signin_out" sec:authorize="!isAuthenticated()"><a href="/users/login"><img class="image" th:src="@{/images/free-icon-avatar.png}"></a></div>
-        <div class="cart" sec:authorize="isAuthenticated()"><a href="#"><img class="image" th:src="@{/images/shopping-cart.png}"></a></div>
-    </div>
-
-    <form action="" class="search-form_pos">
-        <input type="text" placeholder="поиск" class="search_form">
-    </form>
-    </div>
+    <div class="loginAndCart">
+        <a href="#">
+            <img src="images/shopping-cart.png" alt="">
+        </a>
+        <a href="#">
+            <img src="images/free-icon-avatar.png" alt="">
+        </a>
+    </div> 
 </div>
