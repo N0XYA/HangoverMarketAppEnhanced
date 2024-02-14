@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/main.css}">
-    <link th:href="@{/css/registration.css}" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
     <header th:insert="~{blocks/header}"></header>
-    <div th:insert="~{blocks/underheader}"></div>
-
-    <div class="our_full_product">
+    <div class="main_content">
+        <div class="product_page">
+            <div class="product_left">
+                <span class="form_name">info</span>
+            </div>
+            <div class="product_right">
+                <span class="form_name">more info lol</span>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="our_full_product">
         <div class="our_image">
             <img id="image" class="our_image">
         </div>
@@ -30,9 +37,10 @@
             <h1 id="manufacturer"></h1>
             <h1 id="type"></h1>
         </div>
-    </div>
+    </div> -->
 
     <script th:src="@{/js/getById.js}"></script>
     <footer th:insert="~{blocks/footer}"></footer>
+    <div style="color: none; opacity: 0; height: 25px;">0</div>
 </body>
 </html>
