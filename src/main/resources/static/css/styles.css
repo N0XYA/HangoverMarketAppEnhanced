@@ -77,6 +77,16 @@ html {
     font-size: 35px;
 }
 
+.user_info {
+    font-size: 34px;
+    margin-right: 10px;
+}
+
+.user_info > span {
+    display: flex;
+    height: 35px;
+}
+
 .loginAndCart {
     float: right;
     margin-left: auto;
@@ -196,6 +206,11 @@ html {
     border: none;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
     background-color: #f7f7f7;
+    transition: 0.1s;
+}
+
+.under_c_btns >button:hover {
+    background-color: black;
 }
 
 .products {
@@ -353,7 +368,6 @@ html {
     height: 90px;
 }
 
-
 /* login and registration */
 
 .login_form {
@@ -378,8 +392,6 @@ html {
     margin-right: auto;
     margin-top: 75px;
     margin-bottom: 274px;
-    
-
 }
 
 .form_name {
@@ -428,7 +440,89 @@ input::-webkit-inner-spin-button {
     transition: 0.1s;
 }
 
-.auth_form > button:hover{
+.auth_form > button:hover {
     background-color: black;
     color: #ffffff;
+}
+
+/* add form */
+
+.add {
+    background-color: #F7F7F7;
+    /* height: 1426px; */
+    width: 500px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: 274px;
+}
+
+.add_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_form > input[type="text"], input[type="number"], textarea, input[type="file"]{
+    width: 450px;
+    max-width: 450px;
+    min-width: 450px;
+    height: 75px;
+    min-height: 75px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    padding-left: 21px;
+    font-size: 35px;
+    caret-color: transparent;
+}
+
+.add_form > input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add_form > button {
+    border: none;
+    height: 75px;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.add_form > button:hover {
+    background-color: black;
+    color: #ffffff;
+}
+
+.types_selection {
+    width: 450px;
+    height: 75px;
+    border-radius: 15px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    padding-left: 21px;
+    font-size: 35px;
+    caret-color: transparent;
+}
+
+.add_form > img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 }
