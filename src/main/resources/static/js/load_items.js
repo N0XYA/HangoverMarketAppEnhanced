@@ -29,7 +29,7 @@ function create_card(id, img, name, price) {
 
 async function load_items() {
     all =  await get_all();
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 4; i++) {
         const element = all[i];
         var id = element.id;
         var description = element.description;
