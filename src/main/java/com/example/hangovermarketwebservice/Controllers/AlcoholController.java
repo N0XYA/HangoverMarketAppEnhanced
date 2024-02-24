@@ -35,38 +35,10 @@ public class AlcoholController {
         return ResponseEntity.ok().body(all_alcohol);
     }
 
-    @GetMapping("/alcohols/wine")
-    public String pageForWines() {
-        return "wine";
-    }
-
-    @GetMapping("/alcohols/liquor")
-    public String pageForliquor() {
-        return "liquor";
-    }
-
-
-    @GetMapping("/alcohols/beer")
-    public String pageForbeer() {
-        return "beer";
-    }
-
-
-    @GetMapping("/alcohols/vodka")
-    public String pageForvodka() {
-        return "vodka";
-    }
-
-
-    @GetMapping("/alcohols/whiskey")
-    public String pageForwhiskey() {
-        return "whiskey";
-    }
-
-
-    @GetMapping("/alcohols/sparkling")
-    public String pageForsparkling() {
-        return "sparkling";
+    @GetMapping("/alcohols/all_{type}")
+    public String pageForWines(@PathVariable Type type) {
+        System.out.println(type.toString());
+        return type.toString();
     }
 
 

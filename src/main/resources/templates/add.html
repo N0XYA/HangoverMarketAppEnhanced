@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>  
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" th:href="@{/css/main.css}">
-        <link th:href="@{/css/registration.css}" rel="stylesheet"/>
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
         <title>Добавить запись</title>
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
     </head>
     <body>
         <header th:insert="~{blocks/header}"></header>
-        <div class="body-wrapper">
-            <div class="main_container">
-                <div class="main">
-                    <form class="register_form">
+        <div class="main_content">
+            <div class="add">
+                <span class="form_name">add alcohol</span><br>
+                <form class="add_form">
+                    <input type="text" name="name" placeholder="alcohol name" id="alc_name">
+                    <textarea name="description" placeholder="description" id="alc_description"></textarea>
+                    <input type="number" name="price" placeholder="price" id="alc_price">
+                    <input type="text" name="manufacturer" placeholder="manufacturer" id="alc_manufacturer">
+                    <select name="types_selection" id="types" class="types_selection">
+                        <option>--type--</option>
+                        <option>wine</option>
+                        <option>liquor</option>
+                        <option>beer</option>
+                        <option>vodka</option>
+                        <option>whiskey</option>
+                        <option>champagne</option>
+                    </select>
+                    <input type="file" accept="image/png, image/jpg, image/jpeg" id="alc_img">
+                    <img src="" class="preview" alt="">
+                    <button type="button" onclick="uploadForm()">submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="body-wrapper">
                             <h1 class="title_form">Добавить товар</h1>
                             <input id="alc_name" type="text" name="name" placeholder="Название алкоголя" required><br>
                             <input id="alc_description" name="description" placeholder="Описание"><br>
@@ -28,15 +46,16 @@
                                     <option>Виски</option>
                                     <option>Игристое</option>
                                 </select>
-<!--                            <input id="alc_type" type="text" placeholder="Тип"><br>-->
+                            <input id="alc_type" type="text" placeholder="Тип"><b>
                             <input id="alc_img" type="file" accept="image/png, image/jpg, image/jpeg"><br>
                             <img src="" class="preview"alt="Image preview" /><br>
                             <button type="button" onclick="uploadForm()" class="registration_button">Подтвердить</button>
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
         <footer th:insert="~{blocks/footer}"></footer>        
+        <div style="color: none; opacity: 0; height: 25px;">0</div>
         <script th:src="@{/js/add.js}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>

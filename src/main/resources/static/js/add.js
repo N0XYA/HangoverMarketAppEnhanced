@@ -20,36 +20,41 @@ function URLImg(e) {
 fileInput.addEventListener("change", URLImg)
 
 function uploadForm() {
-
     let alc_name = document.getElementById("alc_name").value;
     let description = document.getElementById("alc_description").value;
     let price = document.getElementById("alc_price").value;
     let manufacturer = document.getElementById("alc_manufacturer").value;
 
     let type = document.getElementById("types");
-    let text_type = type.options[type.selectedIndex].text;
-    let final_text_type;
-
-    switch (text_type) {
-        case "Вино":
-            final_text_type = "wine";
-            break;
-        case "Ликер":
-            final_text_type = "liquor";
-            break;
-        case "Пиво":
-            final_text_type = "beer";
-            break;
-        case "Водка":
-            final_text_type = "vodka";
-            break;
-        case "Виски":
-            final_text_type = "whiskey";
-            break;
-        case "Игристое":
-            final_text_type = "sparkling";
-            break;
+    let final_text_type = type.options[type.selectedIndex].text;
+    // let final_text_type;
+    // switch (text_type) {
+    //     case "Вино":
+    //         final_text_type = "wine";
+    //         break;
+    //     case "Ликер":
+    //         final_text_type = "liquor";
+    //         break;
+    //     case "Пиво":
+    //         final_text_type = "beer";
+    //         break;
+    //     case "Водка":
+    //         final_text_type = "vodka";
+    //         break;
+    //     case "Виски":
+    //         final_text_type = "whiskey";
+    //         break;
+    //     case "Игристое":
+    //         final_text_type = "sparkling";
+    //         break;
+    // }
+    if (final_text_type == "champagne"){
+        final_text_type = sparkling;
     }
+    else if(final_text_type == "--type--"){
+        alert("Выберите тип!")
+    }
+
 
     let imgData = reader.result;
     

@@ -31,9 +31,9 @@
             <button></button>
         </div>
         <div class="products">
-            <span>popular</span>
-            <div class="popular_cards">
-                <div class="product_card">
+            <span >popular</span>
+            <div id="popular" class="popular_cards">
+                <!-- <div class="product_card">
                     <img src="images/item_images/fiery.jpg" alt="">
                     <span class="name">Fiery Shield light 0.33l</span>
                     <span class="price">89.99</span>
@@ -56,12 +56,12 @@
                     <span class="name">Fiery Shield light 0.33l</span>
                     <span class="price">89.99</span>
                     <button class="add_to_card_btn">add to cart</button>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="products">
-            <span>whiskey</span>
-            <div class="popular_cards">
+        <!-- <div class="products"> -->
+            <!-- <span>whiskey</span> -->
+            <!-- <div class="popular_cards">
                 <div class="product_card">
                     <img src="images/item_images/glen.jpg" alt="">
                     <span class="name">glen forest 3 yrs 0.7l</span>
@@ -86,11 +86,15 @@
                     <span class="price">999.99</span>
                     <button class="add_to_card_btn">add to cart</button>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
+        <!-- <div class="products">
+            <span>beer</span>
+        </div> -->
     </div>
     <footer th:insert="~{blocks/footer}"></footer>
     <div style="color: none; opacity: 0; height: 25px;">0</div>
-
+    <script th:src="@{/js/load_items.js}"></script>
+    
 </body>
 </html>

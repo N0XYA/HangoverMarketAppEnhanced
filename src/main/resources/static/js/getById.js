@@ -16,13 +16,15 @@ fetch("/alcohols/getBy" + currentUrl, {
         }
     }).then(data => {
         var data = JSON.parse(JSON.stringify(data));
-        document.getElementById('name').innerHTML = data.name;
-        document.getElementById('description').innerHTML = data.description;
-        document.getElementById('price').innerHTML = data.price + " рублей";
-        document.getElementById('manufacturer').innerHTML = data.manufacturer;
+        document.getElementById("type_and_name").innerHTML = data.type + " " + data.name;
+        // document.getElementById('name').innerHTML = data.name;
         document.getElementById('type').innerHTML = data.type;
-//        console.log("/" + data.img.split("/")[5] + "/" + data.img.split("/")[6] + "/" + data.img.split("/")[7]);
-//        document.getElementById('image').src = "/" + data.img.split("/")[5] + "/" + data.img.split("/")[6] + "/" + data.img.split("/")[7];
-        console.log(`${data.img}`);
-        document.getElementById('image').src = `data:image/png;base64,${data.img}`;
+        document.getElementById('description').innerHTML = data.description;
+        document.getElementById("big_description").innerHTML = data.description;
+        document.getElementById('price').innerHTML = data.price;
+        document.getElementById('manufacturer').innerHTML = data.manufacturer;
+        // document.getElementById('type').innerHTML = data.type;
+    //    console.log("/" + data.img.split("/")[5] + "/" + data.img.split("/")[6] + "/" + data.img.split("/")[7]);
+//        document.getElementById('image').src = "/" + data.img.split("/")[5] + "/" + data.img.split("/")[6] + "/" + data.img.split("/")[7];    
+        document.getElementById('alc_image').src = `data:image/png;base64,${data.img}`;
     });
